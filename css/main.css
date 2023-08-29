@@ -924,4 +924,311 @@ main .title::after {
   100% {
     opacity: 100%;
   }
+}
+.control .body {
+  padding: 0 20px;
+}
+.control .body .siteControl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.control .body .siteControl span {
+  color: gray;
+  padding-top: 10px;
+  display: block;
+}
+.control .body .siteControl input {
+  display: none;
+}
+.control .body textarea {
+  resize: none;
+  height: 150px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.control .body textarea:focus {
+  outline: none;
+}
+
+.info .body {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info .body label {
+  width: 100%;
+  padding: 10px 0;
+  color: gray;
+  font-size: 12px;
+}
+.info .body label input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #eeeeee;
+  margin-top: 5px;
+}
+.info .body label input:focus {
+  outline: none;
+}
+.info .body label .email {
+  display: flex;
+  gap: 10px;
+}
+.info .body label .email input {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+.info .body label button {
+  background-color: transparent;
+  color: #0075ff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.security .body {
+  padding: 0 20px;
+}
+.security .body .line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.security .body .line:not(:last-child) {
+  border-bottom: 1px solid #eeeeee;
+}
+.security .body .line span {
+  color: gray;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.security .body .line:last-child .btn {
+  background-color: #eeeeee;
+  color: black;
+}
+
+.socialInfo .body {
+  padding: 0 20px;
+}
+.socialInfo .body .line {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  color: gray;
+  transition: 0.3s;
+  padding: 20px 0;
+  width: 100%;
+}
+.socialInfo .body .line i {
+  width: 40px;
+  height: 40px;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 0 0 6px;
+  border: 1px solid rgba(128, 128, 128, 0.473);
+  border-right: none;
+  transition: 0.3s;
+}
+.socialInfo .body .line input {
+  font-size: 12px;
+  flex: 1;
+  height: 40px;
+  background-color: #eeeeee;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.473);
+  border-radius: 0 6px 6px 0;
+}
+.socialInfo .body .line input:focus {
+  outline: none;
+}
+.socialInfo .body .line input:focus + i {
+  color: black;
+}
+
+.widgets .body {
+  padding: 0 20px;
+}
+.widgets .body .line {
+  padding: 10px 0;
+}
+.widgets .body .line input {
+  display: none;
+}
+.widgets .body .line input:checked + label::before {
+  transform: scale(1);
+}
+.widgets .body .line label {
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.widgets .body .line label:hover::after {
+  border-color: #0075ff;
+}
+.widgets .body .line label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid gray;
+  left: 12px;
+  top: 3px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.widgets .body .line label::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 600;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 12px;
+  top: 3px;
+  z-index: 1;
+  border-radius: 4px;
+  background-color: #0075ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+
+.manager .body {
+  padding: 0 20px;
+}
+.manager .body .radio {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+.manager .body .radio .line {
+  padding: 10px 0;
+}
+.manager .body .radio .line input {
+  display: none;
+}
+.manager .body .radio .line input:checked + label::after {
+  transform: scale(1);
+}
+.manager .body .radio .line label {
+  padding-left: 40px;
+  cursor: pointer;
+  position: relative;
+}
+.manager .body .radio .line label:hover::before {
+  border-color: #0075ff;
+}
+.manager .body .radio .line label::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #0075ff;
+  border-radius: 50%;
+  left: 13px;
+  top: 4px;
+  transition: 0.3s;
+  transform: scale(0);
+}
+.manager .body .radio .line label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  left: 10px;
+  top: 1px;
+}
+.manager .body .bradio {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .manager .body .bradio {
+    flex-direction: column;
+  }
+}
+.manager .body .bradio .line {
+  width: 100%;
+  flex: 1;
+}
+.manager .body .bradio .line input {
+  display: none;
+}
+.manager .body .bradio .line input:checked + label {
+  border-color: #0075ff;
+  color: #0075ff;
+}
+.manager .body .bradio .line label {
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 20px 0;
+  transition: 0.3s;
+}
+
+.sCheckbox {
+  display: none;
+}
+
+.cBtn {
+  background-color: #ccc;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cBtn::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.sCheckbox:checked + .cBtn::before {
+  content: "\f00c";
+  left: 50px;
+  color: #0075ff;
+}
+
+.sCheckbox:checked + .cBtn {
+  background-color: #0075ff;
 }/*# sourceMappingURL=main.css.map */
