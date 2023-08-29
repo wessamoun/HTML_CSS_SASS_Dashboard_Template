@@ -195,6 +195,11 @@ main .title::after {
   left: 20px;
 }
 
+.site {
+  width: 100%;
+  overflow: hidden;
+}
+
 .boxes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -592,6 +597,307 @@ main .title::after {
   cursor: inherit;
 }
 
+.progress {
+  position: relative;
+}
+.progress .cards {
+  padding: 0 0;
+  border-left: 1px solid #0075ff;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.progress .cards .card {
+  padding-left: 40px;
+  font-size: 18px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .progress .cards .card {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+.progress .cards .card:not(:last-child) {
+  padding-bottom: 20px;
+}
+.progress .cards .card::after {
+  content: " ";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #0075ff;
+  border-radius: 50%;
+  left: 0px;
+  top: -5px;
+  transform: translateX(-50%);
+  background-color: white;
+}
+.progress .cards .card::before {
+  content: " ";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  background-color: #0075ff;
+  border-radius: 50%;
+  left: 0px;
+  top: -2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.progress .cards .card.pending::before {
+  opacity: 0;
+  animation: infinite flashing 1s;
+}
+.progress .cards .card.waiting::before {
+  opacity: 0;
+}
+.progress img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+}
+@media (max-width: 768px) {
+  .progress img {
+    display: none;
+  }
+}
+
+.reminders .cards {
+  padding: 0 20px;
+}
+.reminders .cards .card {
+  padding: 5px 20px;
+  margin: 15px 0 15px 30px;
+  border-left: 1px solid;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .reminders .cards .card p {
+    font-size: 12px;
+  }
+}
+.reminders .cards .card::before {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: -27.5px;
+  top: 15.9px;
+}
+.reminders .cards .card.blue {
+  border-color: #0075ff;
+}
+.reminders .cards .card.blue.blue::before {
+  background-color: #0075ff;
+}
+.reminders .cards .card.green {
+  border-color: #22c55e;
+}
+.reminders .cards .card.green.green::before {
+  background-color: #22c55e;
+}
+.reminders .cards .card.orange {
+  border-color: #f59e0b;
+}
+.reminders .cards .card.orange.orange::before {
+  background-color: #f59e0b;
+}
+.reminders .cards .card.red {
+  border-color: #f44336;
+}
+.reminders .cards .card.red.red::before {
+  background-color: #f44336;
+}
+.reminders .cards .card span {
+  color: gray;
+  font-size: 12px;
+}
+
+.post .details {
+  padding: 0 20px;
+}
+.post .details .name {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+.post .details .name img {
+  width: 50px;
+}
+.post .details .name .text {
+  flex: 1;
+}
+.post .details .name .text span {
+  display: block;
+  padding-top: 10px;
+  color: gray;
+}
+.post .details .content {
+  padding: 15px 0 50px;
+  border-top: 1px solid rgba(128, 128, 128, 0.301);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.377);
+  text-transform: capitalize;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .post .details .content {
+    text-align: center;
+  }
+}
+.post .details .numbers {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+.post .details .numbers div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.social .cards {
+  padding: 0 20px 10px;
+}
+.social .cards .card {
+  background-color: cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.social .cards .card i {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.social .cards .card i:hover {
+  transform: skew(10deg);
+}
+.social .cards .card p {
+  flex: 1;
+  margin-left: 15px;
+}
+.social .cards .card .btn {
+  margin-right: 20px;
+  font-size: 12px;
+}
+.social .cards .card.twitter {
+  background-color: #d1ecfd;
+}
+.social .cards .card.twitter i {
+  background-color: #1da1f2;
+  color: white;
+}
+.social .cards .card.twitter p {
+  color: #1da1f2;
+}
+.social .cards .card.twitter .btn {
+  background-color: #1da1f2;
+}
+.social .cards .card.facebook {
+  background-color: #d0e4fd;
+}
+.social .cards .card.facebook i {
+  background-color: #1877f2;
+  color: white;
+}
+.social .cards .card.facebook p {
+  color: #1877f2;
+}
+.social .cards .card.facebook .btn {
+  background-color: #1877f2;
+}
+.social .cards .card.youtube {
+  background-color: #ffcccc;
+}
+.social .cards .card.youtube i {
+  background-color: #ff0000;
+  color: white;
+}
+.social .cards .card.youtube p {
+  color: #ff0000;
+}
+.social .cards .card.youtube .btn {
+  background-color: #ff0000;
+}
+.social .cards .card.linkedin {
+  background-color: #cce4f0;
+}
+.social .cards .card.linkedin i {
+  background-color: #0077b5;
+  color: white;
+}
+.social .cards .card.linkedin p {
+  color: #0077b5;
+}
+.social .cards .card.linkedin .btn {
+  background-color: #0077b5;
+}
+
+.projects {
+  background-color: white;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 15px;
+}
+.projects .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.projects .head h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .projects .head h3 {
+    font-size: 20px;
+  }
+}
+.projects .table {
+  margin: 0 20px 20px;
+  overflow-x: auto;
+}
+.projects .table table {
+  border-spacing: 0;
+  font-size: 15px;
+  width: 100%;
+  min-width: 1000px;
+}
+.projects .table table thead {
+  background-color: #eeeeee;
+  font-weight: bold;
+}
+.projects .table table td {
+  border: 1px solid #eeeeee;
+  padding: 15px;
+}
+.projects .table table td img {
+  width: 40px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-left: -10px;
+}
+.projects .table table .blue {
+  background-color: #0075ff;
+}
+.projects .table table .orange {
+  background-color: #f59e0b;
+}
+.projects .table table .green {
+  background-color: #22c55e;
+}
+
 .btn {
   outline: none;
   text-align: center;
@@ -606,4 +912,16 @@ main .title::after {
 }
 .btn:hover {
   background-color: #1070dd;
+}
+
+@keyframes flashing {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
