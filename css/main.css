@@ -1231,4 +1231,286 @@ main .title::after {
 
 .sCheckbox:checked + .cBtn {
   background-color: #0075ff;
+}
+
+.profile .info {
+  background-color: white;
+  display: flex;
+  margin: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .profile .info {
+    flex-direction: column;
+  }
+}
+.profile .info .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 50px;
+  border-right: 1px solid rgb(226, 226, 226);
+}
+.profile .info .avatar img {
+  width: 100px;
+}
+.profile .info .avatar p {
+  font-weight: bold;
+}
+.profile .info .avatar .level {
+  color: gray;
+}
+.profile .info .avatar .progress {
+  height: 3px;
+  width: 114px;
+  border-radius: 6px;
+  background-color: #ececec;
+  position: relative;
+  overflow: hidden;
+}
+.profile .info .avatar .progress span {
+  height: 3px;
+  width: 75%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  background-color: #0075ff;
+}
+.profile .info .avatar .stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f59e0b;
+}
+.profile .info .avatar .rating {
+  color: gray;
+}
+.profile .info .lines {
+  flex: 1;
+}
+.profile .info .lines .line {
+  font-size: 12px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .profile .info .lines .line {
+    text-align: center;
+  }
+}
+.profile .info .lines .line:not(:last-child) {
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.profile .info .lines .line .head {
+  color: gray;
+}
+.profile .info .lines .line .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .profile .info .lines .line .details {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+  }
+}
+.profile .info .lines .line .details div:not(:last-child) {
+  min-width: 250px;
+  color: gray;
+  padding-top: 10px;
+}
+.profile .info .lines .line .details div:not(:last-child) span {
+  color: black;
+}
+.profile .eInfo {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+}
+@media (max-width: 992px) {
+  .profile .eInfo {
+    flex-direction: column;
+  }
+}
+.profile .eInfo .skills {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+}
+@media (max-width: 992px) {
+  .profile .eInfo .skills {
+    width: 100%;
+  }
+}
+.profile .eInfo .skills h3 {
+  padding-bottom: 10px;
+}
+.profile .eInfo .skills p {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.profile .eInfo .skills .lines .line {
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.profile .eInfo .skills .lines .line span {
+  background-color: #eeeeee;
+  color: black;
+  font-size: 12px;
+}
+.profile .eInfo .activities {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 250px;
+  flex: 1;
+}
+.profile .eInfo .activities h3 {
+  padding-bottom: 10px;
+}
+.profile .eInfo .activities p {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.profile .eInfo .activities .lines .line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.profile .eInfo .activities .lines .line img {
+  width: 64px;
+}
+.profile .eInfo .activities .lines .line .text {
+  flex: 1;
+}
+.profile .eInfo .activities .lines .line .text .one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile .eInfo .activities .lines .line .text .two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+
+.projectsPage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .projectsPage {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.projectsPage .box {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.projectsPage .box h4 {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.projectsPage .box p {
+  color: gray;
+  font-size: 12px;
+}
+.projectsPage .box .date {
+  position: absolute;
+  color: gray;
+  font-size: 12px;
+  right: 20px;
+  top: 10px;
+}
+.projectsPage .box .images {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+.projectsPage .box .images img {
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+}
+.projectsPage .box .images img:hover {
+  z-index: 1;
+}
+.projectsPage .box .images img:not(:first-child) {
+  margin-left: -15px;
+}
+.projectsPage .box .keywords {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .projectsPage .box .keywords {
+    flex-direction: column;
+  }
+}
+.projectsPage .box .keywords span {
+  background-color: #eeeeee;
+  color: black;
+  font-size: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.projectsPage .box .progressPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .projectsPage .box .progressPrice {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.projectsPage .box .progressPrice .progress {
+  width: 250px;
+  height: 5px;
+  border-radius: 10px;
+  background: #eeeeee;
+  overflow: hidden;
+}
+.projectsPage .box .progressPrice .progress span {
+  height: 5px;
+  position: absolute;
+}
+.projectsPage .box .progressPrice .progress span.green {
+  background-color: #22c55e;
+}
+.projectsPage .box .progressPrice .progress span.red {
+  background-color: #f44336;
+}
+.projectsPage .box .progressPrice .progress span.blue {
+  background-color: #0075ff;
+}
+.projectsPage .box .progressPrice .price {
+  color: gray;
 }/*# sourceMappingURL=main.css.map */

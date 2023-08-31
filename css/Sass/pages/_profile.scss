@@ -1,0 +1,170 @@
+@use "../var/var" as *;
+.profile {
+  .info {
+    background-color: white;
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 50px;
+      border-right: 1px solid rgb(226, 226, 226);
+      img {
+        width: 100px;
+      }
+      p {
+        font-weight: bold;
+      }
+      .level {
+        color: gray;
+      }
+      .progress {
+        height: 3px;
+        width: 114px;
+        border-radius: 6px;
+        background-color: #ececec;
+        position: relative;
+        overflow: hidden;
+        span {
+          height: 3px;
+          width: 75%;
+          position: absolute;
+          left: 0;
+          top: 0px;
+          background-color: $blue;
+        }
+      }
+      .stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f59e0b;
+      }
+      .rating {
+        color: gray;
+      }
+    }
+    .lines {
+      flex: 1;
+      .line {
+        font-size: 12px;
+        padding: 20px;
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid rgb(226, 226, 226);
+        }
+        .head {
+          color: gray;
+        }
+        .details {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: flex-start;
+          @media (max-width: 768px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            text-align: center;
+            align-items: center;
+          }
+          div:not(:last-child) {
+            min-width: 250px;
+            color: gray;
+            padding-top: 10px;
+            span {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .eInfo {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+    .skills {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 250px;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      h3 {
+        padding-bottom: 10px;
+      }
+      p {
+        color: gray;
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+      .lines {
+        .line {
+          padding: 15px 0;
+          border-bottom: 1px solid $grey;
+          span {
+            background-color: $grey;
+            color: black;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .activities {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      min-width: 250px;
+      flex: 1;
+      h3 {
+        padding-bottom: 10px;
+      }
+      p {
+        color: gray;
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+      .lines {
+        .line {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 15px 0;
+          border-bottom: 1px solid $grey;
+          img {
+            width: 64px;
+          }
+          .text {
+            flex: 1;
+            .one {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .two {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
