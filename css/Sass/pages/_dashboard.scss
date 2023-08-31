@@ -658,8 +658,11 @@
 .projects {
   background-color: white;
   padding: 20px;
-  margin: 30px;
+  margin: 20px;
   border-radius: 15px;
+  @media (max-width: 768px) {
+    margin: 10px;
+  }
   .head {
     display: flex;
     justify-content: space-between;

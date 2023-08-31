@@ -1,0 +1,87 @@
+@use "../var/var" as *;
+.friendsPage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px;
+  gap: 20px;
+  @media (max-width: 767px) {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .box {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-direction: column;
+      img {
+        width: 100px;
+        border-radius: 50%;
+      }
+      p {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      span {
+        color: gray;
+        font-size: 12px;
+        padding-bottom: 10px;
+      }
+    }
+    .contact {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      i {
+        color: gray;
+        background-color: $grey;
+        padding: 10px;
+        border-radius: 50%;
+        transition: 0.3s;
+        &:hover {
+          background-color: $blue;
+          color: white;
+        }
+      }
+    }
+    .numbers {
+      padding: 5px 0;
+      border-bottom: 1px solid $grey;
+      border-top: 1px solid $grey;
+      .line {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        padding: 5px 0;
+      }
+    }
+    .control {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 15px;
+      span {
+        color: gray;
+        font-size: 12px;
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        .btn {
+          &:last-child {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}

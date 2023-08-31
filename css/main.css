@@ -847,8 +847,13 @@ main .title::after {
 .projects {
   background-color: white;
   padding: 20px;
-  margin: 30px;
+  margin: 20px;
   border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .projects {
+    margin: 10px;
+  }
 }
 .projects .head {
   display: flex;
@@ -1513,4 +1518,152 @@ main .title::after {
 }
 .projectsPage .box .progressPrice .price {
   color: gray;
+}
+
+.coursesPage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .coursesPage {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.coursesPage .box {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.coursesPage .box .mainImage {
+  width: 100%;
+}
+.coursesPage .box .avatar {
+  position: absolute;
+  width: 64px;
+  border: 2px solid white;
+  border-radius: 50%;
+  left: 20px;
+  top: 20px;
+}
+.coursesPage .box .text {
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+.coursesPage .box .text p {
+  font-weight: bold;
+}
+.coursesPage .box .text span {
+  display: block;
+  color: gray;
+  padding: 15px 0 0;
+  font-size: 10px;
+}
+.coursesPage .box .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+}
+.coursesPage .box .peoplePrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+  padding: 10px;
+}
+
+.friendsPage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .friendsPage {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.friendsPage .box {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+.friendsPage .box .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.friendsPage .box .info img {
+  width: 100px;
+  border-radius: 50%;
+}
+.friendsPage .box .info p {
+  font-size: 14px;
+  font-weight: bold;
+}
+.friendsPage .box .info span {
+  color: gray;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.friendsPage .box .contact {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.friendsPage .box .contact i {
+  color: gray;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.friendsPage .box .contact i:hover {
+  background-color: #0075ff;
+  color: white;
+}
+.friendsPage .box .numbers {
+  padding: 5px 0;
+  border-bottom: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+}
+.friendsPage .box .numbers .line {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  padding: 5px 0;
+}
+.friendsPage .box .control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.friendsPage .box .control span {
+  color: gray;
+  font-size: 12px;
+}
+.friendsPage .box .control .buttons {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+.friendsPage .box .control .buttons .btn:last-child {
+  background-color: #f44336;
 }/*# sourceMappingURL=main.css.map */
