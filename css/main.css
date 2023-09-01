@@ -1666,4 +1666,228 @@ main .title::after {
 }
 .friendsPage .box .control .buttons .btn:last-child {
   background-color: #f44336;
+}
+
+.filesPage {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .filesPage {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.filesPage .files {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.filesPage .files .box {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 200px;
+  flex-grow: 1;
+}
+.filesPage .files .box img {
+  width: 60px;
+  padding-top: 10px;
+}
+.filesPage .files .box p {
+  font-size: 14px;
+}
+.filesPage .files .box .owner {
+  align-self: flex-start;
+  color: gray;
+  font-size: 12px;
+}
+.filesPage .files .box .data {
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+  width: 100%;
+}
+.filesPage .files .box i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: gray;
+}
+.filesPage .filesStats {
+  padding: 20px;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .filesPage .filesStats {
+    width: 100%;
+  }
+}
+.filesPage .filesStats h3 {
+  padding-bottom: 10px;
+}
+.filesPage .filesStats .line {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.filesPage .filesStats .line i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filesPage .filesStats .line .blue {
+  color: #0376ff;
+  background-color: #cce3ff;
+}
+.filesPage .filesStats .line .green {
+  color: #31c969;
+  background-color: #d2f4df;
+}
+.filesPage .filesStats .line .red {
+  color: #f44538;
+  background-color: #fdd9d6;
+}
+.filesPage .filesStats .line .orange {
+  color: #f59e0b;
+  background-color: #fdecce;
+}
+.filesPage .filesStats .line .text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.filesPage .filesStats .line .text .qua span {
+  color: gray;
+  padding-top: 5px;
+  display: block;
+}
+.filesPage .filesStats .line .text .size {
+  color: gray;
+}
+.filesPage .filesStats .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.filesPage .filesStats .btn:hover i {
+  animation: up infinite 0.3s;
+}
+.filesPage .filesStats .btn i {
+  margin-right: 5px;
+  position: relative;
+}
+
+@keyframes up {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 3px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.plansPage {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.plansPage .box {
+  padding: 20px;
+  min-width: 450px;
+  background-color: white;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .plansPage .box {
+    min-width: 200px;
+  }
+}
+.plansPage .box.blue .price {
+  background-color: #0075ff;
+  outline: 3px solid #0075ff;
+}
+.plansPage .box.blue .btn {
+  background-color: #0075ff;
+}
+.plansPage .box.orange .price {
+  background-color: #f59e0b;
+  outline: 3px solid #f59e0b;
+}
+.plansPage .box.orange .btn {
+  background-color: #f59e0b;
+}
+.plansPage .box.green .price {
+  background-color: #22c55e;
+  outline: 3px solid #22c55e;
+}
+.plansPage .box.green .btn {
+  background-color: #22c55e;
+}
+.plansPage .box .price {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border: 3px solid white;
+}
+.plansPage .box .price p {
+  position: relative;
+  font-size: 30px;
+}
+.plansPage .box .price p sub {
+  margin-left: 5px;
+}
+.plansPage .box .lines {
+  padding: 20px 0;
+}
+.plansPage .box .lines .line {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.plansPage .box .lines .line i:last-child {
+  color: gray;
+  cursor: pointer;
+  margin-left: auto;
+}
+.plansPage .box .lines .line i:first-child {
+  color: #f44336;
+}
+.plansPage .box .lines .line .yes {
+  color: #22c55e !important;
+}
+.plansPage .box .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */

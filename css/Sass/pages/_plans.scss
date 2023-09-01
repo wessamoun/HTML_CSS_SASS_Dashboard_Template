@@ -1,0 +1,82 @@
+@use "../var/var" as *;
+.plansPage {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  .box {
+    padding: 20px;
+    min-width: 450px;
+    background-color: white;
+    flex-grow: 1;
+    @media (max-width: 768px) {
+      min-width: 200px;
+      
+    }
+    &.blue {
+      .price {
+        background-color: $blue;
+        outline: 3px solid $blue;
+      }
+      .btn {
+        background-color: $blue;
+      }
+    }
+    &.orange {
+      .price {
+        background-color: $orange;
+        outline: 3px solid $orange;
+      }
+      .btn {
+        background-color: $orange;
+      }
+    }
+    &.green {
+      .price {
+        background-color: $green;
+        outline: 3px solid $green;
+      }
+      .btn {
+        background-color: $green;
+      }
+    }
+    .price {
+      position: relative;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border: 3px solid white;
+      p {
+        position: relative;
+        font-size: 30px;
+        sub {
+          margin-left: 5px;
+        }
+      }
+    }
+    .lines {
+      padding: 20px 0;
+      .line {
+        display: flex;
+        gap: 10px;
+        padding: 20px 0;
+        border-bottom: 1px solid $grey;
+        i:last-child {
+          color: gray;
+          cursor: pointer;
+          margin-left: auto;
+        }
+        i:first-child {
+          color: $red;
+        }
+        .yes {
+          color: $green !important;
+        }
+      }
+    }
+    .btn {
+      width: fit-content;
+      padding: 10px;
+    }
+  }
+}
